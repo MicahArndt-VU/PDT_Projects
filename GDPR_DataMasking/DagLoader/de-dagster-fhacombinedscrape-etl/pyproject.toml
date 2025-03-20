@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "de-dagster-fhacombinedscrape-etl"
+version = "0.0.0"
+description = ""
+authors = ["Micah Arndt <micah.arndt@veteransunited.com>"]
+readme = "README.md"
+packages = [{include = "de_dagster_fhacombinedscrape_etl"}]
+
+[tool.poetry.dependencies]
+python = "~3.11.0"
+dagster = "1.8.13"
+dagster-aws = "0.24.13"
+dagster-slack = "0.24.13"
+dagster-webserver = "1.8.13"
+dagster-postgres = "0.24.13"
+pyodbc = "^5.0.0"
+pandas = "^2.1.0"
+tomlkit = "^0.12.1"
+beautifulsoup4 = "^4.12.3"
+requests = "^2.26.0"
+polars = "^0.20.31"
+xlsx2csv="0.8.3"
+fastexcel = "0.11.5"
+urllib3 = "^2.1.0"
+sqlalchemy = "^2.0.25"
+html5lib = "^1.1.0"
+thycotic = { version = "^0.1.2", source = "quicksilver_repo"}
+dagster-graphql = "1.8.13"
+dagster-pipes = "1.8.13"
+openpyxl = "^3.1.5"
+xlrd = "^2.0.1"
+snowflake-snowpark-python = "^1.26.0"
+
+[[tool.poetry.source]]
+name = "quicksilver_repo"
+url = "https://gitlab.redchimney.com/api/v4/projects/8109/packages/pypi/simple"
+priority = "explicit"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.dagster]
+module_name = "de_dagster_fhacombinedscrape_etl"
+

@@ -1,0 +1,13 @@
+
+version: 2
+
+models:
+  - name: pii_mask
+    description: "Mask pii data"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: snowflake_source
+    database: PDT
+    schema: landing
+    tables:
+      - name: fake_data
